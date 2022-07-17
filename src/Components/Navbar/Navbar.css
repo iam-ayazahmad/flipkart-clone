@@ -5,7 +5,10 @@
     display: flex;
 }
 .icon{
-    width: 100px;
-    height: 30px;
+    width: 90px;
+    height: 25px;
+    margin: 5px;
+    margin-bottom: -10px;
+
     
 }
