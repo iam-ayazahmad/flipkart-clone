@@ -1,14 +1,101 @@
 .mainnav{
     background-color: #2874f0;
     width: 100%;
-    height: 60px;
+    height: 55px;
     display: flex;
+    
+
+    /* border: 1px solid yellow; */
+
 }
 .icon{
-    width: 90px;
-    height: 25px;
+    width: 76px;
+    height: 20px;
     margin: 5px;
-    margin-bottom: -10px;
+    /* margin-bottom: 0px; */
+    margin-bottom: -16px;
+    /* border: 1px solid yellow; */
 
     
 }
+.icondiv{
+    margin-left: 12%;
+    margin-right: 6%;
+    margin-top: -8px;
+}
+.subicon{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 550;
+    
+
+}
+.searchbox{
+    background-color: white;
+    
+    width: 550px;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding-bottom: 11px;
+    padding-left: 8px;
+    
+}
+.searchbutton{
+    border: 0px;
+    background-color: white;
+    
+    cursor: pointer;
+    
+
+
+}
+.searchbutton svg{
+    margin-bottom: -6px;
+}
+
+
+.searchinput{
+    width: 92%;
+    border: none;
+    outline: none;
+    height: 80%;    
+    background-color: white;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 14px;
+    /* border: 2px solid red; */
+}
+.somemoreoptiondiv{
+  display: flex;
+  justify-content: space-evenly;
+  width: 37%;
+
+
+}
+.somemoreoptiondiv {
+    font-family: Roboto,Arial,sans-serif;
+    color: white;
+    align-items: center;
+    line-height: 20px;
+    font-size: 17px;
+    letter-spacing: .1px;
+    font-weight: 550;
+    cursor: pointer;
+}
+.loginbutt{
+    background-color: white;
+    color: #2874f0;
+    height: 25px;
+    font-size: 16px;
+    padding: 5px 30px 3px 30px;
+    margin: 10px ;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+
+}
+
+
+

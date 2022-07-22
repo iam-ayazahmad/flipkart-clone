@@ -1,0 +1,29 @@
+.main{
+    width: 90%;
+    height: 100px;
+    /* border: 2px solid red; */
+    /* background-color: yellow; */
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.main img{
+    width: 70px;
+}
+.main {
+    font-weight: 550;
+    font-size: 13px;
+    font-family: Roboto,Arial,sans-serif;
+}
+.main div{
+    margin-top: -1px;
+    text-align: center;
+}
+
+.catamain{
+    cursor: pointer;
+}
+.catamain:hover{
+    color: blue;
+}
