@@ -24,6 +24,9 @@
     margin-top: -8px;
     cursor: pointer;
 }
+.icondiv Link{
+    text-decoration: none;
+}
 .subicon{
     font-size: 12px;
     font-style: italic;

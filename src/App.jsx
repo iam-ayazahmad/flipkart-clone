@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router'
 
 import './App.css'
-import { Catadiv } from './Components/CategoryMain/Catadiv'
+
 import {Navbar} from "./Components/Navbar/Navbar"
-import { Myslider } from './Components/Slider/Slider'
+import { Electronics } from './Pages/Electronics/Electronics'
+import { Home } from './Pages/Home/Home'
+
 
 
 
@@ -14,8 +17,14 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <Catadiv></Catadiv>
-      <Myslider></Myslider>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path='/Electronics' element={<Electronics/>}></Route>
+        <Route></Route>
+        <Route></Route>
+      </Routes>
+      
+      
       
     </div>
   )
