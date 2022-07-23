@@ -3,7 +3,10 @@ import { useState } from 'react'
 import './App.css'
 import { Catadiv } from './Components/CategoryMain/Catadiv'
 import {Navbar} from "./Components/Navbar/Navbar"
-import { Slider } from './Components/Slider/Slider'
+import { Myslider } from './Components/Slider/Slider'
+
+
+
 
 function App() {
   
@@ -12,7 +15,8 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
       <Catadiv></Catadiv>
-      <Slider></Slider>
+      <Myslider></Myslider>
+      
     </div>
   )
 }
