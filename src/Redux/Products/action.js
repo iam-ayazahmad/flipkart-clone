@@ -1,8 +1,6 @@
 import axios from "axios"
 import React from "react"
 
-// import { useDispatch } from "react-redux"
-// const dispatch=useDispatch()
 
 
 const handleLoading=()=>({
@@ -19,10 +17,7 @@ const storeData=(payload)=>({
     payload:payload
 })
 
-const oneProduct=(payload)=>({
-    type:"ONE_PRODUCT",
-    payload:payload
-})
+
 
 const getdata=()=>(dispatch)=>{
     
@@ -36,7 +31,23 @@ const getdata=()=>(dispatch)=>{
     
 }
 
+const storeSingleproduct=(payload)=>({
+    type:"SINGLE_PRODUCT",
+    payload:payload
+})
+
+const getSingledata=(id)=>(dispatch)=>{
+
+    dispatch(handleLoading())
+    axios.get(`http://localhost:8080/Mobiles/${id}`).then(({data})=>{
+      
+      dispatch(storeSingleproduct(data))
+     
+    })
+    
+}
 
 
 
-export {storeData, handleLoading, handleError, getdata, oneProduct}
+
+export {storeData, handleLoading, handleError, getdata, storeSingleproduct, getSingledata}

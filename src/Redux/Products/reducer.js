@@ -1,8 +1,9 @@
 const initState={
     loading:false,
     error:false,
+    singleproduct:{},
     products:[],
-    oneproduct:[],
+    
     
 }
 
@@ -19,8 +20,8 @@ const ProductReducer=(state=initState,action)=>{
         case "STORE_DATA":
             return {...state,loading:false,error:false,products:action.payload}
 
-        case "ONE_PRODUCT":
-            return {...state,oneproduct:action.payload}
+        case "SINGLE_PRODUCT":
+            return {...state,loading:false,error:false,singleproduct:action.payload}
 
         default:
             return state

@@ -2,21 +2,27 @@ import "../Mobiles/Mobiles.css"
 import { useSelector } from "react-redux"
 
 import { useDispatch } from "react-redux"
-import { oneProduct, storeData } from "../../Redux/Products/action"
+// import { oneProduct, storeData } from "../../Redux/Products/action"
 
 import { Link } from "react-router-dom"
 import { Cateline } from "../../Components/Cateline/Catadiv"
 import { useState } from "react"
+import { useNavigate, useParams } from "react-router"
 
 export const Mobiles=()=>{
 
     const mydata=useSelector((state)=>state.products)
 
+    const para=useParams()
+   
+
+    const navigate=useNavigate()
+
     const dispatch=useDispatch()
 
-  
+    const [fil,setFil]=useState("")
 
-    
+  
     
 
     return(
@@ -68,8 +74,8 @@ export const Mobiles=()=>{
                 <div className="datadiv">{mydata.map((e)=>{
                     return(
                         <div>
-                            <Link to={"/oneproduct"}>
-                        <div onClick={()=>{dispatch(oneProduct(e))}} className="oneline">
+                            
+                        <div onClick={()=>navigate(`/Mobiles/${e.id}`)} className="oneline">
                             <div className="imgdiv"><img src={e.img[0]} alt="" /></div>
                             
                             <div className="datadiv">{e.title}<div style={{color:"gray",fontSize:"15px"}}><span className="ratetext">4.4 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg==" alt="" /></span> 4.487,421 Ratings & 5,244 Reviews <span></span></div><ul><li>Expandable Upto 512 GB</li><li>16.59 cm (6.53 inch) HD+ Display</li><li>13MP + 2MP + 2MP | 5MP Front Camera</li><li>5000 mAh Lithium-ion Polymer Battery</li><li >MediaTek Helio G35 Processor</li><li>1 Year Warranty for Handset, 6 Months for Accessories</li></ul></div>
@@ -82,7 +88,7 @@ export const Mobiles=()=>{
                             
                             </div>
                         </div>
-                        </Link>
+                       
                         <hr />
                         </div>
                     )

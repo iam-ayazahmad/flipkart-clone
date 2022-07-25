@@ -22,10 +22,10 @@ function App() {
 
   let dispatch=useDispatch()
 
-  dispatch(getdata())
+  
 
   useEffect(()=>{
-    
+    dispatch(getdata())
   },[])
   
   
@@ -38,7 +38,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path='/Electronics' element={<Electronics/>}></Route>
         <Route path='/Mobiles' element={<Mobiles/>}></Route>
-        <Route path='/oneproduct' element={<Oneproduct/>}></Route>
+        <Route path='/Mobiles/:id' element={<Oneproduct/>}></Route>
       </Routes>
       
       

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { useSelector } from "react-redux"
+
+// import { useSelector } from "react-redux"
 import { Addbutton } from "../../Components/AddButton/Addbutton"
 import { Buybutton } from "../../Components/Buybutton/Buybutton"
 import { Cateline } from "../../Components/Cateline/Catadiv"
@@ -7,12 +7,38 @@ import { Cateline } from "../../Components/Cateline/Catadiv"
 
 
 import "../OneProduct/OneProducts.css"
+import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getSingledata } from "../../Redux/Products/action"
 
 
 export const Oneproduct=()=>{
 
+    const dispatch=useDispatch()
 
-        const initdata=useSelector((state)=>state.oneproduct)
+    const {id}=useParams()
+    
+
+    useEffect(()=>{
+        if(id)
+        {
+            dispatch(getSingledata(id))
+        }
+        
+        
+    },[id,dispatch])
+
+    const initdata=useSelector((state)=>console.log(state.singleproduct))
+    console.log(initdata)
+
+    
+
+    
+
+   
+
+
 
     
     return(
@@ -21,6 +47,7 @@ export const Oneproduct=()=>{
         <div className="onemain">
             <div className="leftbox">
                 <div className="verticalline">
+                    <h1>perticular</h1>
                    {initdata.img.map((elem)=>{
                     return(
                         <img className="smallimg" src={elem} alt="" srcset="" />
@@ -51,6 +78,7 @@ export const Oneproduct=()=>{
                 <div></div>
             </div>
         </div>
+        <h1>{id}</h1>
         </div>
     )
 
