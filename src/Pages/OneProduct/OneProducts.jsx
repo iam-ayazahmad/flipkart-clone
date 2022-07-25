@@ -19,6 +19,11 @@ export const Oneproduct=()=>{
 
     const {id}=useParams()
     
+    const initdata=useSelector((state)=>(state.singleproduct))
+
+    
+   
+
 
     useEffect(()=>{
         if(id)
@@ -29,8 +34,9 @@ export const Oneproduct=()=>{
         
     },[id,dispatch])
 
-    const initdata=useSelector((state)=>console.log(state.singleproduct))
-    console.log(initdata)
+    
+    
+    
 
     
 
@@ -44,10 +50,11 @@ export const Oneproduct=()=>{
     return(
         <div>
         <Cateline></Cateline>
-        <div className="onemain">
+        {Object.keys(initdata).length!==0 ? 
+         <div className="onemain">
             <div className="leftbox">
                 <div className="verticalline">
-                    <h1>perticular</h1>
+                    
                    {initdata.img.map((elem)=>{
                     return(
                         <img className="smallimg" src={elem} alt="" srcset="" />
@@ -77,8 +84,8 @@ export const Oneproduct=()=>{
 
                 <div></div>
             </div>
-        </div>
-        <h1>{id}</h1>
+        </div>: <h1>Something went wrong</h1>}
+        
         </div>
     )
 

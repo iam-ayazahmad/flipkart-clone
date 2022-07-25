@@ -3,6 +3,9 @@
     width: 100%;
     height: 55px;
     display: flex;
+    position: fixed;
+    margin-top: -55px;
+    
     
 
     /* border: 1px solid yellow; */

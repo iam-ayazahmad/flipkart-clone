@@ -42,6 +42,7 @@ const getSingledata=(id)=>(dispatch)=>{
     axios.get(`http://localhost:8080/Mobiles/${id}`).then(({data})=>{
       
       dispatch(storeSingleproduct(data))
+      dispatch(handleLoading(true))
      
     })
     

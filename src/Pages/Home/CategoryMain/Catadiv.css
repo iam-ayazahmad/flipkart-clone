@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-evenly;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-top: 55px;
 }
 * a {
     text-decoration: none;
