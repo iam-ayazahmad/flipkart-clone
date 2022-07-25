@@ -1,0 +1,20 @@
+{
+    "Mobiles": [
+      { "id": 1, "title": "Redmi Note 11 (Starburst Black, 64 GB)  (6 GB RAM)","price":14999,"Brand":"Mi" ,"ram":"6GB","img":["https://rukminim1.flixcart.com/image/416/416/kzhbfrk0/mobile/k/d/j/note-11-2201117ti-redmi-original-imagbh8dmpjfzrjw.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/kzvlua80/mobile/v/u/t/redmi-note-11-2201117ti-mi-original-imagbshc9gahxb5h.jpeg?q=70"]},
+      { "id": 2, "title": "Redmi 9A Sport (Coral Green, 32 GB)  (2 GB RAM)","price":6999,"Brand":"Mi" ,"ram":"2GB","img":["https://rukminim1.flixcart.com/image/416/416/ku5ufm80/mobile/s/i/q/sport-9a-redmi-original-imag7chxqqu7h5hs.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ku5ufm80/mobile/n/j/c/sport-9a-redmi-original-imag7chxff4hgsjb.jpeg?q=70"]},
+      { "id": 3, "title": "APPLE iPhone 12 (White, 128 GB)","price":57000,"Brand":"Apple" ,"ram":"8GB","img":["https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/j/f/9/apple-iphone-12-dummyapplefsn-original-imafwg8dkyh2zgrh.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/j/f/9/apple-iphone-12-dummyapplefsn-original-imafwg8dy8mmbanh.jpeg?q=70"]},
+      { "id": 4, "title": "APPLE iPhone 13 Pro Max (Graphite, 1 TB)","price":179000,"Brand":"Apple" ,"ram":"8GB","img":["https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/3/e/o/iphone-13-pro-max-mll63hn-a-apple-original-imag6vpgwfgxdsj6.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/k/l/i/iphone-13-pro-mlvv3hn-a-apple-original-imag6vpbuyr344gy.jpeg?q=70"]},
+      { "id": 5, "title": "Xiaomi 11i 5G (Purple Mist, 128 GB)  (8 GB RAM)","price":26999,"Brand":"Mi" ,"ram":"8GB","img":["https://rukminim1.flixcart.com/image/416/416/ky7lci80/mobile/e/j/x/-original-imagag2gatsxzcuv.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/ky1vl3k0/mobile/2/k/h/-original-imagadbyajtxpsgd.jpeg?q=70"]},
+      { "id": 6, "title": "SAMSUNG Galaxy F23 5G (Forest Green, 128 GB)  (6 GB RAM)","price":14599,"Brand":"Samsung" ,"ram":"6GB","img":["https://rukminim1.flixcart.com/image/416/416/l0sgyvk0/mobile/f/v/c/-original-imagcg22pf79cgau.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/l15bxjk0/mobile/l/q/k/-original-imagcs2aaj2r3apf.jpeg?q=70"]},
+      { "id": 7, "title": "SAMSUNG Galaxy F13 (Sunrise Copper, 128 GB)  (4 GB RAM)","price":12499,"Brand":"Samsung" ,"ram":"4GB","img":["https://rukminim1.flixcart.com/image/416/416/l4n2oi80/mobile/r/6/t/-original-imagfhu6dcpdnqkh.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/l59xq4w0/mobile/k/l/x/-original-imagfz7yvktcmbrf.jpeg?q=70"]},
+      { "id": 8, "title": "SAMSUNG Galaxy M52 5G (Icy Blue, 128 GB)  (8 GB RAM)","price":22000,"Brand":"Samsung" ,"ram":"8GB","img":["https://rukminim1.flixcart.com/image/416/416/kulk9zk0/mobile/j/b/0/galaxy-m52-5g-sm-m526blbhinu-samsung-original-imag7zx66vpkp9mg.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/kulk9zk0/mobile/j/h/3/galaxy-m52-5g-sm-m526blbhinu-samsung-original-imag7zx6jrvpwe7u.jpeg?q=70"]},
+      { "id": 9, "title": "realme 9 (Sunburst Gold, 128 GB)  (4 GB RAM)","price":17499,"Brand":"Realme" ,"ram":"4GB","img":["https://rukminim1.flixcart.com/image/416/416/l3t2fm80/mobile/6/w/7/-original-imageu8cuhfumfw7.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/l1mh7rk0/mobile/c/f/i/-original-imagd5zqhsh7gacx.jpeg?q=70"]}
+    
+    ],
+    "electronics": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ]
+    
+  }
+
+  

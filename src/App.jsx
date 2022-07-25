@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect,React } from 'react'
 import { Route, Routes } from 'react-router'
 
 import './App.css'
@@ -6,12 +6,29 @@ import './App.css'
 import {Navbar} from "./Components/Navbar/Navbar"
 import { Electronics } from './Pages/Electronics/Electronics'
 import { Home } from './Pages/Home/Home'
+import { Mobiles } from './Pages/Mobiles/Mobiles'
+
+import { handleLoading, storeData ,getdata } from './Redux/Products/action'
 
 
+import axios from "axios";
 
+
+import {useDispatch} from "react-redux"
+import { Oneproduct } from './Pages/OneProduct/OneProducts'
 
 
 function App() {
+
+  let dispatch=useDispatch()
+
+  dispatch(getdata())
+
+  useEffect(()=>{
+    
+  },[])
+  
+  
   
 
   return (
@@ -20,8 +37,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path='/Electronics' element={<Electronics/>}></Route>
-        <Route></Route>
-        <Route></Route>
+        <Route path='/Mobiles' element={<Mobiles/>}></Route>
+        <Route path='/oneproduct' element={<Oneproduct/>}></Route>
       </Routes>
       
       

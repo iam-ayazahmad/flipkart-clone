@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+}
+
+.filterdiv{
+    width: 19%;
+    /* border: 5px solid red; */
+    margin: 0.5% 0% 0.5% 0.5%;
+    background-color: white;
+}
+.datadiv{
+    width: 79%;
+    margin: 0.5% 0.5% 0.5% 0.5%;
+    background-color: white;
+    
+    /* border: 5px solid rgb(0, 64, 255); */
+}
+.datadiv ul li{
+  
+    font-family: Roboto,Arial,sans-serif;
+    padding-right: 1px;
+    font-size: 12px;
+}
+.oneline{
+    display: flex;
+    width: 90%;
+    
+}
+/* .oneline:hover{
+    background-color: rgb(188, 224, 255);
+} */
+.imgdiv{
+    width: 30%;
+
+}
+.imgdiv img{
+    width: 60%;
+    padding: 3%;
+    /* border: 2px solid rgb(255, 0, 0); */
+}
+.datadiv .datadiv{
+
+    width: 65%;
+    font-weight: 500;
+    font-size: 22px;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    /* border: 2px solid rgb(204, 0, 255); */
+}
+.datadiv ul li {
+    font-weight: 300;
+    font-size: 16px;
+}
+.pricediv{
+
+    width: 25%;
+    
+    font-weight: 600;
+    text-align: left;
+    
+    
+
+}
