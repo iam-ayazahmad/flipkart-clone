@@ -11,7 +11,7 @@ export const Myslider = () => {
 
 
   const renderSlides = () =>
-    [{img:"https://rukminim1.flixcart.com/flap/1688/280/image/ddaa48602f3e8f6c.jpg?q=50"},{img:"https://rukminim1.flixcart.com/flap/1688/280/image/6549654b7720f105.jpg?q=50"},
+    [{img:"https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/351ade425a21d0f7.jpg?q=50"},{img:"https://rukminim1.flixcart.com/flap/1688/280/image/6549654b7720f105.jpg?q=50"},
     {img:"https://rukminim1.flixcart.com/flap/1688/280/image/3c1ffd44cb438c16.jpg?q=50"},{img:"https://rukminim1.flixcart.com/flap/1688/280/image/d4d6cd8bd0c533a1.jpg?q=50"},
     {img:"https://rukminim1.flixcart.com/flap/1688/280/image/f2bf22581e9ec489.jpg?q=50"}
     ].map(num => (

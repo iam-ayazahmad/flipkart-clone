@@ -11,6 +11,9 @@
     /* border: 1px solid yellow; */
 
 }
+.mainnav a{
+    color: white;
+}
 .icon{
     width: 76px;
     height: 20px;

@@ -22,7 +22,7 @@ const storeData=(payload)=>({
 const getdata=()=>(dispatch)=>{
     
     dispatch(handleLoading())
-    axios.get("http://localhost:8080/Mobiles").then(({data})=>{
+    axios.get("https://flipdata.herokuapp.com/Mobiles").then(({data})=>{
       
       dispatch(storeData(data))
       dispatch(handleLoading())
@@ -36,14 +36,17 @@ const storeSingleproduct=(payload)=>({
     payload:payload
 })
 
+const handleoneLoading=()=>({
+    type:"IS_ONELOADING",
+
+})
 const getSingledata=(id)=>(dispatch)=>{
 
-    dispatch(handleLoading())
-    axios.get(`http://localhost:8080/Mobiles/${id}`).then(({data})=>{
+    
+    axios.get(`https://flipdata.herokuapp.com/Mobiles/${id}`).then(({data})=>{
       
       dispatch(storeSingleproduct(data))
-      dispatch(handleLoading(true))
-     
+      
     })
     
 }
@@ -51,4 +54,5 @@ const getSingledata=(id)=>(dispatch)=>{
 
 
 
-export {storeData, handleLoading, handleError, getdata, storeSingleproduct, getSingledata}
+
+export {storeData, handleLoading, handleError, getdata, storeSingleproduct, getSingledata, handleoneLoading}

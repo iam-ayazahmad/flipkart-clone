@@ -3,6 +3,7 @@ const initState={
     error:false,
     singleproduct:{},
     products:[],
+    oneLoading:false
     
     
 }
@@ -15,7 +16,10 @@ const ProductReducer=(state=initState,action)=>{
             return {...state,loading:true}
 
         case "IS_ERROR":
-            return {...state,loading:true}
+            return {...state,error:true}
+
+        case "IS_ONELOADING":
+            return {...state,oneLoading:true}
 
         case "STORE_DATA":
             return {...state,loading:false,error:false,products:action.payload}

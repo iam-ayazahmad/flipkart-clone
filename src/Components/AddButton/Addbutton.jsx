@@ -1,9 +1,9 @@
 import "../AddButton/Addbutton.css"
 
-export const Addbutton=({data})=>{
+export const Addbutton=({data,addcart})=>{
     return(
         <div>
-            <button className="addstyle">{data}</button>
+            <button onClick={()=>{addcart()}} className="addstyle" >{data}</button>
         </div>
     )
 }

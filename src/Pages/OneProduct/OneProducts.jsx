@@ -10,7 +10,8 @@ import "../OneProduct/OneProducts.css"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { getSingledata } from "../../Redux/Products/action"
+import { getSingledata ,handleoneLoading} from "../../Redux/Products/action"
+import { addToCart } from "../../Redux/Cart/action"
 
 
 export const Oneproduct=()=>{
@@ -19,7 +20,10 @@ export const Oneproduct=()=>{
 
     const {id}=useParams()
     
-    const initdata=useSelector((state)=>(state.singleproduct))
+    
+
+    const oneload=useSelector((state)=>(state.myproduct.oneLoading))
+    console.log(oneload)
 
     
    
@@ -29,13 +33,31 @@ export const Oneproduct=()=>{
         if(id)
         {
             dispatch(getSingledata(id))
+            dispatch(handleoneLoading())
+     
+            
         }
         
         
     },[id,dispatch])
 
+    if(handleoneLoading==true)
+    {
+        
+    }
+
+    const initdata=useSelector((state)=>(state.myproduct.singleproduct))
+
+    const cartdata=useSelector((state)=>(state.cart.cart))
+
+    console.log(cartdata)
+
     
     
+    function adddata(){
+        dispatch(addToCart(initdata))
+        console.log("ab")
+    }
     
 
     
@@ -50,7 +72,8 @@ export const Oneproduct=()=>{
     return(
         <div>
         <Cateline></Cateline>
-        {Object.keys(initdata).length!==0 ? 
+        {Object.keys(initdata).length!==0 & oneload==true ? 
+        
          <div className="onemain">
             <div className="leftbox">
                 <div className="verticalline">
@@ -62,7 +85,7 @@ export const Oneproduct=()=>{
                    })}
                 </div>
                     <div className="imgdivbox">
-                        <img src={initdata.img[0]} alt="" /><div className="buttbox"><Addbutton data={"ADD TO CART"}/><Buybutton data={"BUY NOW"}/>
+                        <img src={initdata.img[0]} alt="" /><div className="buttbox"><Addbutton data={"ADD TO CART"} addcart={adddata}/><Buybutton data={"BUY NOW"}/>
                     </div>
                 </div>
             </div>
@@ -84,7 +107,7 @@ export const Oneproduct=()=>{
 
                 <div></div>
             </div>
-        </div>: <h1>Something went wrong</h1>}
+        </div>: <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700" alt="Loading..." />}
         
         </div>
     )

@@ -16,6 +16,7 @@ import axios from "axios";
 
 import {useDispatch} from "react-redux"
 import { Oneproduct } from './Pages/OneProduct/OneProducts'
+import { Cart } from './Pages/Cart/Cart'
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path='/Electronics' element={<Electronics/>}></Route>
         <Route path='/Mobiles' element={<Mobiles/>}></Route>
         <Route path='/Mobiles/:id' element={<Oneproduct/>}></Route>
+        <Route path='/Cart' element={<Cart/>}></Route>
       </Routes>
       
       
