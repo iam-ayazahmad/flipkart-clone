@@ -159,6 +159,11 @@ border: 1px solid #2874f0;
     color: white;
     background-color: #2874f0;
 }
+.removeitem{
+    width: 20px;
+    text-align: right;
+    height: 20px;
+}
 
 
 

@@ -4,7 +4,11 @@ import {useDispatch,useSelector} from "react-redux"
 
 import {Buybutton} from "../../Components/Buybutton/Buybutton"
 
+import { DecrementQty, IncrementQty, RemoveFromCart } from "../../Redux/Cart/action"
+
 export const Cart=()=>{
+
+    const dispatch=useDispatch()
 
     
     const Mycartdata=useSelector((state)=>(state.cart.cart))
@@ -22,6 +26,35 @@ export const Cart=()=>{
         
     }
 
+    const decQty=(id)=>{
+
+        dispatch(DecrementQty({id}))
+
+        let fnitem=0
+        for(var i=0; i<Mycartdata.length; i++)
+        {
+            if(Mycartdata[i].id==id)
+            {
+                fnitem=Mycartdata[i].qty
+            }
+        }
+
+        if(fnitem==1)
+        {
+            dispatch(RemoveFromCart({id}))
+        }
+        
+    }
+    const incQty=(id)=>{
+
+        dispatch(IncrementQty({id}))
+
+    }
+
+    const Rmbitem=(id)=>{
+        dispatch(RemoveFromCart({id}))
+    }
+
     
 
 
@@ -34,7 +67,7 @@ export const Cart=()=>{
 
                 <div className="leftcartbox">
                     <div className="flipkartwithcartcount">  {cartcount>0? <span>Flipkart ({cartcount})</span>:<span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3AZ826hsut4_Te3sWXtIm7EfzDi-3xKLpyA&usqp=CAU" alt="" /></span>} </div>
-                    <div>{Mycartdata.map((e)=>{
+                    {cartcount>0?<div>{Mycartdata.map((e)=>{
                         return(
                             <div style={{borderBottom:"1px solid rgba(191, 191, 191, 0.651)"}}>
                             <div className="showdatamain">
@@ -46,14 +79,17 @@ export const Cart=()=>{
                                     <div className="priceline"><span style={{textDecoration:"line-through",color:"gray",fontSize:"12px"}}>₹{e.price}</span><span><strong style={{display:"inline-block",fontSize:"20px"}}>₹{Math.round(e.price-(e.price*10/100).toFixed(0))}</strong> </span><span style={{color:"green"}}>10%off</span></div>
                                     <div><span style={{color:"gray",fontSize:"12px"}}>Seller: Flipkart </span><img style={{width:"40px"}} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="" /></div>
                                 </div>
+                                <img onClick={()=>Rmbitem(e.id)} className="removeitem" src="https://www.freeiconspng.com/thumbs/close-icon/black-close-icon-3.png" alt="" />
                                 
                             </div>
-                            <div className="cartcountbox"><button>-</button><span>{e.qty}</span><button>+</button></div>
+                            <div className="cartcountbox"><button onClick={()=>decQty(e.id)}>-</button><span>{e.qty}</span><button onClick={()=>incQty(e.id)}>+</button></div>
+                            
                            
                             </div>
+                            
 
                         )
-                    })}</div>
+                    })}</div>:null}
                     <div className="placebuttondiv">{cartcount>0?<Buybutton data={"Place Order"}></Buybutton>:null}</div> 
 
                     
@@ -73,6 +109,7 @@ export const Cart=()=>{
                 
 
             </div>
+            
             
             
             

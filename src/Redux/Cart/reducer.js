@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "./actionTypes";
+import { ADD_TO_CART,DEC_QTY, INC_QTY, REMOVEFROM_CART } from "./actionTypes";
 
 const cartinitstate={
     cart:[]
@@ -38,6 +38,35 @@ const cartReducer=(state=cartinitstate,action)=>{
             }
 
             return {...state, cart:newCart}
+
+        case INC_QTY:
+            let modifiedcartinc=state.cart.map((product)=>{
+                if(product.id===payload.id){
+                    return {...product, qty:product.qty+1}
+                }
+                else{
+                    return product
+                }
+            })
+            return{...state,cart:modifiedcartinc}
+
+        case DEC_QTY:
+            let modifiedcartdec=state.cart.map((product)=>{
+                if(product.id===payload.id){
+                    return {...product, qty:product.qty-1}
+                }
+                else{
+                    return product
+                }
+            })
+            return{...state,cart:modifiedcartdec}
+
+        case REMOVEFROM_CART:
+            let updatedCart=state.cart.filter((product)=>{
+                return !(product.id===payload.id)
+            })
+
+            return{...state,cart:updatedCart}
 
 
         default:
