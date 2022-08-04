@@ -31,6 +31,9 @@ const getdata=()=>(dispatch)=>{
     
 }
 
+
+
+
 const storeSingleproduct=(payload)=>({
     type:"SINGLE_PRODUCT",
     payload:payload

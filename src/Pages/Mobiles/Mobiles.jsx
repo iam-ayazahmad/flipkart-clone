@@ -6,45 +6,62 @@ import { useDispatch } from "react-redux"
 
 import { Link } from "react-router-dom"
 import { Cateline } from "../../Components/Cateline/Catadiv"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router"
 import { Checkbox } from "antd"
 
 import {useSearchParams} from "react-router-dom"
 
+
 export const Mobiles=()=>{
 
     const mydata=useSelector((state)=>state.myproduct.products)
 
-    const para=useParams()
-   
-
+    // const allloading=useSelector((state)=>state.myproduct.loading)
+    // console.log(allloading)
+    
     const navigate=useNavigate()
-
     const dispatch=useDispatch()
 
-    const [fil,setFil]=useState("")
-
-  const [searchParams,setSearchParams]=useSearchParams()
 
 
+
+
+
+    const [searchParams,setSearchParams]=useSearchParams()
+
+    const [catafil,setCatafil]=useState(
+        searchParams.get("Brand")|| ""
+    )
+     console.log(searchParams)
+
+ 
     
+    useEffect(()=>{
+        if(catafil){
+            setSearchParams({Brand:catafil},{replace:true})
+        } 
+
+    },[catafil,searchParams])
+
+   
 
     return(
         <div>
             <Cateline></Cateline>
-            <div className="container">
+            {/* {allloading==false? <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700" alt="Loading..." />: */}
+            <div  className="container">
                 
                 <div className="filterdiv"><h2>Filters</h2>
                 
                 <div>
                     <hr />
                     <label style={{color:"#2874f0"}}>Brand</label>
-                    <select onChange={(e)=>setFil(e.target.value)} style={{padding: "10px", backgroundColor:"edf2ff", border:"none", width:"100%"}}>
+                    <select onChange={(e)=>setCatafil(e.target.value)} style={{padding: "10px", backgroundColor:"edf2ff", border:"none", width:"100%"}}>
                         <option value="Mi">Mi</option>
                         <option value="Apple">Apple</option>
                         <option value="Samsung">Samsung</option>
-                        <Checkbox></Checkbox>
+                        
                     </select>
                 </div>
                 <h1></h1>
@@ -52,7 +69,7 @@ export const Mobiles=()=>{
                 <div>
                     <hr />
                     <label style={{color:"#2874f0"}}>Ram</label>
-                    <select style={{padding: "10px", backgroundColor:"edf2ff", border:"none", width:"100%"}}>
+                    <select   style={{padding: "10px", backgroundColor:"edf2ff", border:"none", width:"100%"}}>
                     <option value="2GB">2GB</option>
                         <option value="4GB">4GB</option>
                         <option value="6GB">6GB</option>
@@ -63,7 +80,7 @@ export const Mobiles=()=>{
                 <div>
                     <hr />
                     <label style={{color:"#2874f0"}}>Price Range</label>
-                    <select style={{padding: "10px", backgroundColor:"edf2ff", border:"none", width:"100%"}}>
+                    <select  style={{padding: "10px", backgroundColor:"edf2ff", border:"none", width:"100%"}}>
                         <option value="1000" >Under 10,000</option>
                         <option value="20000">under 20,000</option>
                         <option value="100000">under 1,00,000</option>
@@ -90,7 +107,7 @@ export const Mobiles=()=>{
 
                 <div style={{paddingTop:"1%"}} className="datadiv">{mydata.map((e)=>{
                     return(
-                        <div>
+                        <div key={e.id}>
                           {/* <Link to={`/Mobiles/${e.id}`}>  */}
                         <div 
                         onClick={()=>
@@ -118,6 +135,7 @@ export const Mobiles=()=>{
                 })}</div>
                 </div>
             </div>
+            {/* } */}
         </div>
     )
 }
