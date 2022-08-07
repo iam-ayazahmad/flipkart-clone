@@ -5,6 +5,7 @@
     display: flex;
     position: fixed;
     margin-top: -55px;
+    padding-top: 3px;
     
     
 
@@ -20,15 +21,16 @@
     margin: 5px;
     /* margin-bottom: 0px; */
     margin-bottom: -16px;
-    /* border: 1px solid yellow; */
+    
 
     
 }
 .icondiv{
-    margin-left: 12%;
+    margin-left: 11%;
     margin-right: 6%;
     margin-top: -8px;
     cursor: pointer;
+    
 }
 .icondiv Link{
     text-decoration: none;
@@ -43,7 +45,7 @@
 .searchbox{
     background-color: white;
     
-    width: 550px;
+    width: 40%;
     height: 25px;
     margin-top: 8px;
     margin-bottom: 8px;
