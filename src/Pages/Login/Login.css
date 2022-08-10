@@ -7,12 +7,34 @@
     z-index: 2;
     margin: 0; 
     height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 
-} */
+} 
+
+.loginbody{
+    background-color: white;
+    width: 650px;
+    height: 520px;
+    border-radius: 2px;
+    display: flex;
+}
+
+.leftbluelogin{
+    width: 45%;
+    background-color: #2874f0;
+
+}
+.rightinputlogin{
+    width: 65%;
+
+}
 
 
 
-/* body{
+
+body{
     overflow: hidden
 } */
