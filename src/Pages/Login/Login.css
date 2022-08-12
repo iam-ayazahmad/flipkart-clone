@@ -1,4 +1,4 @@
-/* .loginback{
+.loginback{
     background-color: rgba(0, 0, 0, 0.498);
     top: 0;
   
@@ -14,27 +14,49 @@
 
 } 
 
+*{
+    font-family: Roboto,Arial,sans-serif;
+}
+
 .loginbody{
     background-color: white;
-    width: 650px;
-    height: 520px;
+    width:50%;
+    height: 80%;
     border-radius: 2px;
     display: flex;
+  
 }
 
 .leftbluelogin{
-    width: 45%;
+    width: 37%;
     background-color: #2874f0;
+    padding: 40px 3% 0px 5%;
+    
+    
 
+}
+.leftbluelogin p{
+    color: #dbdbdb;
+    font-size: 18px;
 }
 .rightinputlogin{
     width: 65%;
 
 }
+.loginwhitext{
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+}
+.leftbluelogin :nth-child(1)
+{
+    text-align: left;
+}
 
 
 
 
-body{
+/* body{
     overflow: hidden
 } */
