@@ -6,8 +6,7 @@
     position: fixed;
     margin-top: -55px;
     padding-top: 3px;
-    
-    
+    z-index: 2;
 
     /* border: 1px solid yellow; */
 
